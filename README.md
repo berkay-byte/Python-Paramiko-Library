@@ -1,4 +1,4 @@
-Tabii ki, GitHub'da daha temiz görünmesi için hem Türkçe hem de İngilizce bölümlerini tamamen birbirinden ayırdım. Bu metni doğrudan kopyalayıp README.md dosyana yapıştırabilirsin.
+
 🛡️ Paramiko SSH Command Executor
 
 English | Türkçe
