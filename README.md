@@ -1,51 +1,69 @@
+Tabii ki, GitHub'da daha temiz görünmesi için hem Türkçe hem de İngilizce bölümlerini tamamen birbirinden ayırdım. Bu metni doğrudan kopyalayıp README.md dosyana yapıştırabilirsin.
 🛡️ Paramiko SSH Command Executor
 
-This project is a Python-based interactive SSH terminal client that allows you to execute commands on a remote server (like Metasploitable) using the Paramiko library.
+English | Türkçe
+English
 
-Bu proje, Paramiko kütüphanesini kullanarak uzak bir sunucuda (Metasploitable gibi) komut çalıştırmanızı sağlayan Python tabanlı bir interaktif SSH terminal istemcisidir.
-🚀 Features / Özellikler
+This project is a Python-based interactive SSH terminal client that allows you to execute commands on a remote server using the Paramiko library.
+🚀 Features
 
     Interactive Shell: Execute multiple commands in a loop until you type 'quit'.
 
     Safe Credentials: Asks for username and password at runtime instead of hardcoding them.
 
-    Error Handling: Catches connection errors and authentication failures.
+    Error Handling: Catches connection errors and authentication failures using try-except blocks.
 
-    Output Decoding: Automatically decodes byte outputs from the server to readable text.
+    Connection Management: Ensures the SSH connection is closed properly after the execution is finished.
+
+🛠️ Requirements
+
+You need to have Python and the Paramiko library installed:
+Bash
+
+pip install paramiko
+
+📖 Usage
+
+    Open paramiko1.py and set the ip variable to your target's IP address (Default: 192.168.1.101).
+
+    Run the script:
+    Bash
+
+    python3 paramiko1.py
+
+    Enter your SSH credentials when prompted.
+
+    Type any Linux command. Type quit to exit.
+
+Türkçe
+
+Bu proje, Paramiko kütüphanesini kullanarak uzak bir sunucuda komut çalıştırmanızı sağlayan Python tabanlı bir interaktif SSH terminal istemcisidir.
+🚀 Özellikler
 
     İnteraktif Terminal: 'quit' yazana kadar döngü içinde birden fazla komut çalıştırın.
 
     Güvenli Giriş: Kullanıcı adı ve şifreyi kodun içine yazmak yerine çalışma anında sorar.
 
-    Hata Yönetimi: Bağlantı hatalarını ve kimlik doğrulama sorunlarını yakalar.
+    Hata Yönetimi: Bağlantı hatalarını ve kimlik doğrulama sorunlarını try-except blokları ile yakalar.
 
-    Çıktı Çözümleme: Sunucudan gelen byte verilerini okunabilir metne dönüştürür.
+    Bağlantı Yönetimi: İşlem bittiğinde SSH bağlantısının düzgün bir şekilde kapatılmasını sağlar.
 
-🛠️ Requirements / Gereksinimler
+🛠️ Gereksinimler
 
-You need to have Python and the Paramiko library installed. Python ve Paramiko kütüphanesinin kurulu olması gerekir.
+Sisteminizde Python ve Paramiko kütüphanesinin kurulu olması gerekir:
 Bash
 
 pip install paramiko
 
-📖 Usage / Kullanım
+📖 Kullanım
 
-    Set the Target IP: Open paramiko1.py and change the ip variable to your target's IP address (Default is 192.168.1.101). Hedef IP'yi Ayarlayın: paramiko1.py dosyasını açın ve ip değişkenini hedefinizin IP'si ile değiştirin.
+    paramiko1.py dosyasını açın ve ip değişkenini hedefinizin IP'si ile değiştirin (Varsayılan: 192.168.1.101).
 
-    Run the Script: Script'i Çalıştırın:
+    Script'i çalıştırın:
     Bash
 
-    python3 paramiko1.py
+python3 paramiko1.py
 
-    Login: Enter your SSH credentials when prompted. Giriş: Sorulduğunda SSH kimlik bilgilerinizi girin.
+Sorulduğunda SSH kullanıcı bilgilerinizi girin.
 
-    Execute: Type any Linux command. Type quit to exit. Çalıştır: Herhangi bir Linux komutu yazın. Çıkmak için quit yazın.
-
-📝 Code Overview / Kod Hakkında Notlar
-Part / Bölüm	Description / Açıklama
-AutoAddPolicy()	Automatically adds the server's host key to the 'known_hosts'. / Sunucu anahtarını otomatik olarak 'known_hosts' listesine ekler.
-exec_command()	Sends the command to the remote server. / Komutu uzak sunucuya gönderir.
-decode()	Converts server output from bytes to string. / Sunucu çıktısını byte formatından metne çevirir.
-⚖️ License / Lisans
-
-This project is for educational purposes (Cybersecurity testing). Use it responsibly. Bu proje eğitim amaçlıdır (Siber güvenlik testleri). Lütfen sorumlu bir şekilde kullanın.
+Herhangi bir Linux komutu yazın. Çıkmak için quit yazın.
